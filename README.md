@@ -15,7 +15,7 @@ Given a JSON object:
 
 ```json
 {
-   "foo": ["bar", "baz"],
+   "colors": ["red", "green"],
    "": 0,
    "a/b": 1,
    "c%d": 2,
@@ -31,16 +31,16 @@ Given a JSON object:
 Below are shown the JSON pointer paths to each element:
 
 ```c++
-""           // the whole document
-"/foo"       ["bar", "baz"]
-"/foo/0"     "bar"
-"/"          0
-"/a~1b"      1
-"/c%d"       2
-"/e^f"       3
-"/g|h"       4
-"/i\\j"      5
-"/k\"l"      6
-"/ "         7
-"/m~0n"      8
+""           	// the whole document
+"/colors"    	["red", "green"]
+"/colors/0"  	"red"
+"/"          	0
+"/a~1b"      	1
+"/c%d"       	2
+"/e^f"       	3
+"/g|h"       	4
+"/i\\j"      	5
+"/k\"l"      	6
+"/ "         	7
+"/m~0n"      	8
 ```
