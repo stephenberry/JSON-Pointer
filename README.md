@@ -28,7 +28,7 @@ Given a JSON object:
 }
 ```
 
-Below are shown the JSON pointer paths to each element:
+Below are the JSON pointer paths to each element:
 
 ```c++
 ""           	// the whole document
@@ -44,3 +44,23 @@ Below are shown the JSON pointer paths to each element:
 "/ "         	7
 "/m~0n"      	8
 ```
+
+`~` is delimited with `~0`
+
+`/` is delimited with `~1`
+
+### Nested Example
+
+```json
+{
+  "grandparent": {
+    "parent": {
+      "child": {
+        "name": "bob"
+      }
+    }
+  }
+}
+```
+
+The path to `"bob"` is `"/grandparent/parent/child/name"`.
